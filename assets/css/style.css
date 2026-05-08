@@ -1,0 +1,156 @@
+body {
+  background-color: #000000;
+  font-family: "Space Mono", monospace;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+a:hover {
+  color: #bdbdbd;
+  transition: 0.3s;
+}
+
+nav a {
+  margin: 0 5px;
+}
+
+header {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px 0 10px;
+  background-color: rgba(100, 100, 100, 0.178);
+  border-radius: 80px;
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 1000;
+  box-shadow: rgba(156, 156, 156, 0.144) 0px 5px 15px;
+}
+
+#home {
+  position: relative;
+  height: 80vh;
+  /* ocupa a tela inteira */
+  overflow: hidden;
+}
+
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* cobre toda a seção */
+  object-fit: cover;
+  z-index: -1;
+}
+
+#home::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* muda para o final da seção */
+  width: 100%;
+  height: 150px;
+  /* reduz o tamanho do gradiente */
+  background: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.8) 60%,
+      #000 100%);
+  z-index: -1;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  /* garante que o texto fique acima do vídeo */
+  color: white;
+  text-align: center;
+  padding-top: 20vh;
+  /* centraliza verticalmente */
+}
+
+.home-content h1 {
+  margin-bottom: 20px;
+  /* espaço menor abaixo do título */
+}
+
+.home-content p {
+  margin-top: 0;
+  margin-bottom: 50px;
+  /* remove o espaço extra acima do parágrafo */
+}
+
+.btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px 30px;
+  border-radius: 50px;
+  box-shadow: rgba(156, 156, 156, 0.445) 0px 5px 15px;
+}
+
+.btn:hover {
+  outline: 5px solid rgba(255, 255, 255, 0.185);
+  outline-offset: 5px;
+  box-shadow: rgba(156, 156, 156, 0.56) 0px 22px 70px 4px;
+  color: white;
+}
+
+
+#repositorios {
+  position: relative;
+  height: 40vh;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(40%);
+}
+
+.repositorios {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;
+  padding-left: 200px;
+  margin: 0 auto;
+}
+
+.repositorios h2 {
+  padding-left: 50px;
+  font-size: xx-large;
+}
+
+.repositorios p {
+  margin-top: 0;
+}
+
+#sobre-mim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre-mim h2 {
+  font-size: xx-large;
+}
