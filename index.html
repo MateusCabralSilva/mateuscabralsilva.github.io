@@ -81,6 +81,16 @@
         <img src="./assets/img/1757358157691.jpg" alt="" style="border-radius: 100px;" width="300vh" height="300vh">
     </section>
 
+
+    <script>
+const video = document.getElementById("bg-video");
+
+video.play().catch(() => {
+    document.addEventListener("touchstart", () => {
+        video.play();
+    }, { once: true });
+});
+</script>
     <script src="./assets/js/link.js"></script>
 </body>
 
