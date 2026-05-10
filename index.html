@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
 
+
+    <link rel="icon" href="/assets/img/logo2.png" type="image/png">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,16 +29,19 @@
 
     <section id="home">
         <video autoplay muted loop playsinline webkit-playsinline preload="auto" id="bg-video" width="">
-            <source src="https://res.cloudinary.com/da3tyxvfa/video/upload/v1778280440/675b1d999b51d68336d6f6434ddf2be9_1_zyrugg.mp4" type="video/mp4">
+            <source
+                src="https://res.cloudinary.com/da3tyxvfa/video/upload/v1778280440/675b1d999b51d68336d6f6434ddf2be9_1_zyrugg.mp4"
+                type="video/mp4">
             Seu navegador não suporta vídeo em HTML5.
         </video>
         <main class="home-content">
             <h1>Bem-vindo ao meu portfólio</h1>
-            <p><b>Explorando meus projetos e repositórios. </b>Sou apaixonado por <b>tecnologia,
-                    <br>programação e cibersegurança,</b> sempre explorando novas tecnologias,
-                <br>segurança digital e desenvolvimento de sistemas.
-                <br>Gosto de criar soluções inteligentes, <b>aprender constantemente </b>
-                <br>e transformar ideias em projetos inovadores através do código.
+            <p>
+                <b>Explorando meus projetos e repositórios. </b>Sou apaixonado por <b>tecnologia,
+                programação e cibersegurança,</b> sempre explorando novas tecnologias,
+                segurança digital e desenvolvimento de sistemas.
+                Gosto de criar soluções inteligentes, <b>aprender constantemente </b>
+                e transformar ideias em projetos inovadores através do código.
             </p>
             <a href="https://github.com/MateusCabralSilva" class="btn"
                 style="border-radius: 50px 10px 10px 50px;"><b>GitHub</b></a>
@@ -51,46 +56,58 @@
         <article class="repositorios">
             <h2>Repositórios</h2>
             <p>Meus repositórios reúnem projetos desenvolvidos durante meus estudos e
-                <br>práticas na área de tecnologia, com foco em desenvolvimento web e
-                <br>lógica de programação. Entre eles, destacam-se aplicações em HTML,
-                <br>além de projetos em C# realizados ao longo do curso técnico no SENAC.
-                <br>Esses projetos refletem minha evolução como desenvolvedor,
-                <br>abordando desde conceitos básicos até a criação de soluções mais estruturadas,
-                <br>como calculadoras, páginas web e atividades práticas.
-                <br>Estou constantemente atualizando meus repositórios para aprimorar
-                <br>minhas habilidades e explorar novas tecnologias.
+                práticas na área de tecnologia, com foco em desenvolvimento web e
+                lógica de programação. Entre eles, destacam-se aplicações em HTML,
+                além de projetos em C# realizados ao longo do curso técnico no SENAC.
+                Esses projetos refletem minha evolução como desenvolvedor,
+                abordando desde conceitos básicos até a criação de soluções mais estruturadas,
+                como calculadoras, páginas web e atividades práticas.
+                Estou constantemente atualizando meus repositórios para aprimorar
+                minhas habilidades e explorar novas tecnologias.
             </p>
+            <a href="https://github.com/MateusCabralSilva" class="btn">Repositorios GitHub</a>
         </article>
     </section>
 
 
     <section id="sobre-mim">
+        <h2>Sobre Mim</h2>
         <article class="sobre-mim">
-            <h2>Sobre Mim</h2>
-            <p>Sou estudante de tecnologia com foco em desenvolvimento de sistemas e cibersegurança, 
-                <br>construindo projetos práticos para fortalecer minhas habilidades em programação e 
-                <br>solução de problemas. Tenho experiência com desenvolvimento web e aplicações em C#, 
-                <br>adquirida durante minha formação no SENAC e em projetos pessoais.
-                <br>Tenho grande interesse em segurança digital, boas práticas de desenvolvimento e 
-                <br>aprendizado contínuo, buscando sempre me atualizar com novas tecnologias e 
-                <br>tendências do mercado. Gosto de transformar ideias em soluções funcionais, 
-                <br>desenvolvendo projetos que unem criatividade, lógica e eficiência. 
-                <br>Estou em constante evolução, explorando novos desafios e oportunidades para 
-                <br>crescer como desenvolvedor e contribuir com soluções inovadoras por meio da tecnologia.</p>
+            <img id="foto" src="./assets/img/Social.jpeg" alt="Foto de perfil">
+            <p>
+                Sou estudante de tecnologia com foco em desenvolvimento de sistemas e cibersegurança,
+                construindo projetos práticos para fortalecer minhas habilidades em programação e
+                solução de problemas. Tenho experiência com desenvolvimento web e aplicações em C#,
+                adquirida durante minha formação no SENAC e em projetos pessoais.
+                Tenho grande interesse em segurança digital, boas práticas de desenvolvimento e
+                aprendizado contínuo, buscando sempre me atualizar com novas tecnologias e
+                tendências do mercado. Gosto de transformar ideias em soluções funcionais,
+                desenvolvendo projetos que unem criatividade, lógica e eficiência.
+                Estou em constante evolução, explorando novos desafios e oportunidades para
+                crescer como desenvolvedor e contribuir com soluções inovadoras por meio da tecnologia.
+            </p>
         </article>
-        <img src="./assets/img/1757358157691.jpg" alt="" style="border-radius: 100px;" width="300vh" height="300vh">
+    </section>
+
+    <section>
+        <h2>Projetos</h2>
+        <article>
+            
+        </article>
     </section>
 
 
-    <script>
-const video = document.getElementById("bg-video");
 
-video.play().catch(() => {
-    document.addEventListener("touchstart", () => {
-        video.play();
-    }, { once: true });
-});
-</script>
+
+    <script>
+        const video = document.getElementById("bg-video");
+
+        video.play().catch(() => {
+            document.addEventListener("touchstart", () => {
+                video.play();
+            }, { once: true });
+        });
+    </script>
     <script src="./assets/js/link.js"></script>
 </body>
 
