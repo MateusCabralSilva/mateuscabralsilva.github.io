@@ -16,6 +16,7 @@ a {
 h1,
 h2 {
   font-size: 50px;
+  z-index: 1;
 }
 
 a:hover {
@@ -543,10 +544,6 @@ footer p {
 
   #projetos {
     height: auto;
-  }
-
-  #projetos h2 {
-    z-index: 1;
   }
 }
 
