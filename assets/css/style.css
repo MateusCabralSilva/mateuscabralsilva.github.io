@@ -8,11 +8,11 @@ a {
   color: white;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
+  transition: 0.3s ease-in-out;
 }
 
 a:hover {
-  color: #bdbdbd;
-  transition: 0.3s;
+  font-weight: 700;
 }
 
 nav a {
@@ -38,49 +38,44 @@ header {
   box-shadow: rgba(156, 156, 156, 0.144) 0px 5px 15px;
 }
 
-#home {
+#home,
+#repositorios {
   position: relative;
   height: 80vh;
-  /* ocupa a tela inteira */
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 20px;
 }
 
 
-#bg-video {
+#bg-video,
+.image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* cobre toda a seção */
   object-fit: cover;
   z-index: -1;
+}
+
+#bg-video {
   pointer-events: none;
 }
 
 #home::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  /* muda para o final da seção */
-  width: 100%;
   height: 150px;
-  /* reduz o tamanho do gradiente */
-  background: linear-gradient(to bottom,
-      transparent 0%,
-      rgba(0, 0, 0, 0.8) 60%,
-      #000 100%);
-  z-index: -1;
 }
 
 .home-content {
   position: relative;
+  max-width: 700px;
+  margin: 0 auto;
   z-index: 1;
   /* garante que o texto fique acima do vídeo */
   color: white;
   text-align: center;
-  padding-top: 20vh;
   /* centraliza verticalmente */
 }
 
@@ -89,9 +84,10 @@ header {
   /* espaço menor abaixo do título */
 }
 
-.home-content p {
+.home-content p,
+.repositorios p {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   /* remove o espaço extra acima do parágrafo */
 }
 
@@ -103,55 +99,81 @@ header {
 }
 
 .btn:hover {
-  outline: 5px solid rgba(255, 255, 255, 0.185);
-  outline-offset: 5px;
-  box-shadow: rgba(156, 156, 156, 0.56) 0px 22px 70px 4px;
-  color: white;
+  box-shadow:
+    0 0 0 5px rgba(0, 0, 0, 0.7),
+    0 0 0 10px rgba(255, 255, 255, 0.185),
+    rgba(156, 156, 156, 0.56) 0px 22px 70px 4px;
+  font-weight: 400;
 }
 
-
-#repositorios {
-  position: relative;
-  height: 40vh;
-  overflow: hidden;
-  padding: 60px 0;
-}
-
-.image {
+#repositorios::before,
+#repositorios::after,
+#home::after {
+  content: "";
   position: absolute;
-  top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  z-index: 1;
+  /* fica acima do conteúdo */
+}
+
+#repositorios::before,
+#repositorios::after {
+  height: 50px;
+}
+
+/* Gradiente no topo */
+#repositorios::before {
+  top: 0;
+  background: linear-gradient(to top,
+      transparent 0%,
+      rgba(0, 0, 0, 0.8) 60%,
+      #000 100%);
+}
+
+/* Gradiente embaixo */
+#repositorios::after,
+#home::after {
+  bottom: 0;
+  background: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.8) 60%,
+      #000 100%);
+}
+
+
+.image {
   filter: brightness(40%);
 }
 
 .repositorios {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 800px;
-  padding-left: 200px;
+  text-align: center;
+  max-width: 700px;
   margin: 0 auto;
 }
 
-.repositorios h2 {
-  padding-left: 50px;
+.repositorios h2,
+#sobre-mim h2 {
   font-size: xx-large;
+  text-align: center;
 }
 
-.repositorios p {
-  margin-top: 0;
+.sobre-mim {
+  position: relative;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: auto;
+  text-align: justify;
+  padding: 20px;
 }
 
-#sobre-mim {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.sobre-mim h2 {
-  font-size: xx-large;
+#foto {
+  float: right;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  shape-outside: circle(50%);
+  clip-path: circle(50%);
+  margin-left: 20px;
+  object-fit: cover;
 }
