@@ -5,15 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
-
-
     <link rel="icon" href="/assets/img/logo2.png" type="image/png">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
@@ -25,6 +18,14 @@
             <a href="#sobre-mim">Sobre Mim</a>
             <a href="#projetos">Projetos</a>
         </nav>
+
+        <button class="menu-btn" id="menu-btn">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
     </header>
 
     <section id="home">
@@ -36,26 +37,48 @@
         </video>
         <main class="home-content">
             <h1>Bem-vindo ao meu portfólio</h1>
-            <p>
-                <b>Explorando meus projetos e repositórios. </b>Sou apaixonado por <b>tecnologia,
-                programação e cibersegurança,</b> sempre explorando novas tecnologias,
-                segurança digital e desenvolvimento de sistemas.
-                Gosto de criar soluções inteligentes, <b>aprender constantemente </b>
-                e transformar ideias em projetos inovadores através do código.
+            <p class="pc">
+                Aqui você encontrará meus projetos, estudos e experiências nas <b>áreas de programação, cibersegurança e
+                    tecnologia.</b> Estou sempre explorando novas ideias, desenvolvendo soluções criativas e aprimorando
+                minhas
+                habilidades através do código e da inovação.
             </p>
-            <a href="https://github.com/MateusCabralSilva" class="btn"
-                style="border-radius: 50px 10px 10px 50px;"><b>GitHub</b></a>
-            <a href="https://www.linkedin.com/in/mateus-cabral-621440194" class="btn"
-                style="border-radius: 5px;"><b>LinkedIn</b></a>
-            <a href="#projetos" class="btn" style="border-radius: 10px 50px 50px 10px;"><b>Projetos</b></a>
+            <p class="mobile">
+                Aqui você encontrará meus projetos, estudos e experiências nas <b>áreas de programação, cibersegurança e
+                    tecnologia.</b>
+            </p>
+            <div class="home-btn">
+                <div class="home-btn-pc">
+                    <a href="https://github.com/MateusCabralSilva" class="btn"
+                        style="border-radius: 50px 10px 10px 50px;">GitHub</a>
+                    <a href="https://www.linkedin.com/in/mateus-cabral-621440194" class="btn"
+                        style="border-radius: 5px;">LinkedIn</a>
+                    <a href="#projetos" class="btn" style="border-radius: 10px 50px 50px 10px;">Projetos</a>
+                </div>
+                <div class="home-btn-mobile">
+                    <div>
+                        <a href="https://github.com/MateusCabralSilva" class="btn"
+                            style="border-radius: 30px 10px 10px 10px;">GitHub</a>
+                        <a href="https://www.linkedin.com/in/mateus-cabral-621440194" class="btn"
+                            style="border-radius: 10px 30px 10px 10px;">LinkedIn</a>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <a href="#projetos" class="btn"
+                            style="border-radius: 10px 10px 10px 30px; padding: 12px 25px;">Projetos</a>
+                        <a href="https://www.instagram.com/_cabralzx_/" class="btn btn-insta"
+                            style="border-radius: 10px 10px 30px 10px; padding: 12px 22px;">Instagram</a>
+                    </div>
+                </div>
+            </div>
         </main>
     </section>
 
     <section id="repositorios">
-        <img src="./assets/img/Design sem nome (5).png" alt="" class="image">
+        <img src="./assets/img/Design sem nome (5).png" alt="" class="image pc">
+        <img src="./assets/img/repo-mobile.png" alt="" class="image mobile">
         <article class="repositorios">
             <h2>Repositórios</h2>
-            <p>Meus repositórios reúnem projetos desenvolvidos durante meus estudos e
+            <p class="pc-2">Meus repositórios reúnem projetos desenvolvidos durante meus estudos e
                 práticas na área de tecnologia, com foco em desenvolvimento web e
                 lógica de programação. Entre eles, destacam-se aplicações em HTML,
                 além de projetos em C# realizados ao longo do curso técnico no SENAC.
@@ -64,6 +87,11 @@
                 como calculadoras, páginas web e atividades práticas.
                 Estou constantemente atualizando meus repositórios para aprimorar
                 minhas habilidades e explorar novas tecnologias.
+            </p>
+            <p class="mobile-2">
+                Meus repositórios reúnem projetos desenvolvidos durante meus estudos em programação, desenvolvimento web
+                e tecnologia. Neles compartilho aplicações, atividades práticas e experiências que representam minha
+                evolução como desenvolvedor e meu aprendizado constante.
             </p>
             <a href="https://github.com/MateusCabralSilva" class="btn">Repositorios GitHub</a>
         </article>
@@ -89,16 +117,75 @@
         </article>
     </section>
 
-    <section>
+    <section id="projetos">
+        <img src="./assets/img/Projetos.png" alt="" class="image">
         <h2>Projetos</h2>
-        <article>
-            
-        </article>
+        <div class="projetos">
+            <article class="card">
+                <img src="./assets/img/bruce2.jpeg" alt="">
+                <h3>Bruce Firmware Smoochie</h3>
+                <p>Projeto baseado em ESP32 utilizando o firmware Bruce Smoochie, focado em experimentos com redes sem
+                    fio, sinais IR e automação de testes. O dispositivo conta com interface própria em display OLED/TFT,
+                    botões físicos e múltiplos módulos de comunicação, permitindo explorar protocolos e funções de
+                    cibersegurança de forma prática e portátil.</p>
+            </article>
+            <article class="card">
+                <img src="./assets/img/jammer2.jpeg" alt="">
+                <h3>NRFBox-2</h3>
+                <p>Clone funcional inspirado no NRFBox-2 da CiferTech, desenvolvido para estudos de comunicação wireless
+                    utilizando módulos NRF24L01 EBYTE E01-2G4M27D. O projeto possui interface integrada, controles
+                    físicos e suporte para
+                    escaneamento e análise de frequências RF, sendo utilizado em pesquisas e aprendizado sobre
+                    protocolos sem fio e segurança em IoT.</p>
+            </article>
+            <article class="card">
+                <img src="./assets/img/server2.jpeg" alt="">
+                <h3>Servidor Caseiro Linux</h3>
+                <p>Servidor caseiro desenvolvido a partir de peças de computadores antigos, rodando Ubuntu para estudos
+                    de redes, hospedagem e administração de sistemas Linux. Utilizado para testes de serviços locais,
+                    armazenamento, monitoramento e aprendizado em infraestrutura, aproveitando hardware reciclado para
+                    criar um ambiente funcional e econômico.</p>
+            </article>
+            <article class="card" style="display: none;">
+                <img src="./assets/img/bruce2.jpeg" alt="">
+                <h3>Drone MultiWii</h3>
+                <p>Projeto de drone DIY desenvolvido com MultiWii e Arduino Pro Mini, focado em estudos de eletrônica,
+                    sistemas embarcados e controle de voo. O projeto envolve integração de sensores, calibração de
+                    estabilidade, comunicação entre módulos e configuração do firmware para testes de navegação e
+                    desempenho em voo.</p>
+            </article>
+        </div>
     </section>
 
+    <footer>
+        <div class="redes-sociais">
+            <a href="https://www.instagram.com/_cabralzx_/"><img
+                    src="./assets/img/instagram-letter-white-logo-icon-ig-app-transparent-background-premium-social-media-design-for-digital-download-free-png.webp"
+                    alt="" width="30px"></a>
+            <a href="https://github.com/MateusCabralSilva"><img
+                    src="./assets/img/github-6980894_1280-removebg-preview.png" alt="" width="45px"></a>
+            <a href="https://www.linkedin.com/in/mateus-cabral-621440194"><img src="./assets/img/2 (1).png" alt=""
+                    width="30px"></a>
+
+        </div>
+        <p>
+            Copyright 2026 © Todos os direitos reservados. Design por Mateus Cabral
+        </p>
+    </footer>
 
 
 
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const nav = document.querySelector("header nav");
+
+        menuBtn.addEventListener("click", () => {
+
+            menuBtn.classList.toggle("active");
+            nav.classList.toggle("active");
+
+        });
+    </script>
     <script>
         const video = document.getElementById("bg-video");
 
