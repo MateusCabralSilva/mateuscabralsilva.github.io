@@ -436,9 +436,7 @@ footer p {
 }
 
 .home-btn {
-  align-items: center;
-  justify-self: center;
-  display: flex;
+  margin: 0 auto;
 }
 
 /* MENU MOBILE */
