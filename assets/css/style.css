@@ -55,6 +55,7 @@ header {
   /* cobre toda a seção */
   object-fit: cover;
   z-index: -1;
+  pointer-events: none;
 }
 
 #home::after {
