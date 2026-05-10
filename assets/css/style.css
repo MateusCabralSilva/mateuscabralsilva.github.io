@@ -250,6 +250,7 @@ header {
     background 0.25s ease,
     border 0.25s ease;
   cursor: pointer;
+  z-index: 1;
 }
 
 .btn:hover {
