@@ -536,7 +536,7 @@ footer p {
   .home-btn-mobile {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px;
+    gap: 3px;
     margin: 0 auto;
 
   }
