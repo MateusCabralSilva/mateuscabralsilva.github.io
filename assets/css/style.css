@@ -4,7 +4,6 @@ body {
   background-color: #000000;
   font-family: "Neuton", serif;
   color: white;
-  margin: 0;
 }
 
 a {
@@ -85,7 +84,7 @@ header nav a {
 
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
-
+  
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
 
@@ -470,8 +469,10 @@ footer p {
 
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 
-    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 50px;
 
     opacity: 0;
     pointer-events: none;
@@ -498,7 +499,8 @@ footer p {
   .mobile {
     display: block;
   }
-    .card {
+
+  .card {
     width: auto;
   }
 }
@@ -553,5 +555,3 @@ footer p {
     height: auto;
   }
 }
-
-
