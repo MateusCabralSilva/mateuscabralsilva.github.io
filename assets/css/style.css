@@ -4,7 +4,6 @@ body {
   background-color: #000000;
   font-family: "Neuton", serif;
   color: white;
-  margin: 0;
 }
 
 a {
@@ -355,7 +354,8 @@ header {
 }
 
 .projetos {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 
@@ -531,7 +531,11 @@ footer p {
   }
 
   .home-btn-mobile {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin: 0 auto;
+
   }
 
   .home-btn {
@@ -541,11 +545,12 @@ footer p {
 
 @media (max-width: 1250px) {
   .projetos {
-    flex-direction: column;
+    grid-template-columns: none;
   }
 
   #projetos {
     height: auto;
   }
 }
+
 
