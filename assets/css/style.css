@@ -516,10 +516,6 @@ footer p {
   .mobile-2 {
     display: block;
   }
-
-  .home-content {
-    margin-top: -90px;
-  }
 }
 
 @media (max-width: 517px) {
