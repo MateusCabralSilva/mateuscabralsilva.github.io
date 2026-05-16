@@ -582,14 +582,6 @@ footer p {
 
 @media (max-width: 700px) {
 
-  .pc {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
-  }
-
   header {
     width: 92%;
   }
@@ -755,6 +747,14 @@ footer p {
 
   .redes-sociais {
     gap: 25px;
+  }
+  
+   .pc {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
   }
 }
 
