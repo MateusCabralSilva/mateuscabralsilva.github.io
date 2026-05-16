@@ -805,3 +805,191 @@ button,
 .timeline-point {
   transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+/* PROJETOS BACKGROUND*/
+
+#projetos {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ESTRELAS */
+
+.stars,
+.stars2,
+.stars3 {
+  position: absolute;
+
+  top: -2000px;
+  left: 0;
+
+  width: 2px;
+  height: 2px;
+
+  background: white;
+
+  border-radius: 50%;
+
+  animation: starsMove linear infinite;
+
+  opacity: 0.7;
+
+  z-index: 0;
+}
+
+/* CAMADAS */
+
+/* ESTRELAS MAIS DENSAS */
+
+.stars {
+  box-shadow:
+    120px 300px white,
+    400px 900px white,
+    700px 1200px white,
+    1000px 600px white,
+    1300px 1700px white,
+    1600px 400px white,
+    1900px 1400px white,
+    2200px 800px white,
+    2500px 1800px white,
+    2800px 300px white,
+    3100px 1100px white,
+    3400px 1500px white,
+    200px 100px white,
+    500px 500px white,
+    800px 900px white,
+    1100px 1300px white,
+    1500px 1700px white,
+    1800px 200px white,
+    2100px 600px white,
+    2400px 1000px white,
+    2700px 1400px white,
+    3000px 1800px white,
+    3300px 400px white,
+    3600px 800px white,
+    3900px 1200px white,
+    4200px 1600px white;
+
+  animation-duration: 80s;
+}
+
+.stars2 {
+  width: 3px;
+  height: 3px;
+
+  opacity: 0.5;
+
+  box-shadow:
+    200px 500px white,
+    600px 1000px white,
+    900px 1500px white,
+    1400px 700px white,
+    1800px 1300px white,
+    2300px 400px white,
+    2700px 1700px white,
+    3200px 900px white,
+    350px 250px white,
+    750px 650px white,
+    1150px 1050px white,
+    1550px 1450px white,
+    1950px 1850px white,
+    2350px 350px white,
+    2750px 750px white,
+    3150px 1150px white;
+
+  animation-duration: 120s;
+}
+
+.stars3 {
+  width: 1px;
+  height: 1px;
+
+  opacity: 0.9;
+
+  box-shadow:
+    150px 700px white,
+    500px 1400px white,
+    800px 300px white,
+    1200px 1800px white,
+    1700px 1000px white,
+    2100px 1600px white,
+    2600px 600px white,
+    3000px 1300px white,
+    350px 950px white,
+    650px 250px white,
+    950px 1550px white,
+    1250px 450px white,
+    1650px 1750px white,
+    2050px 850px white,
+    2450px 1250px white,
+    2850px 1650px white,
+    3250px 550px white,
+    3650px 1450px white;
+
+  animation-duration: 60s;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes starsMove {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(2000px);
+  }
+}
+
+/* CONTEÚDO ACIMA DAS ESTRELAS */
+
+#projetos h2,
+.projetos {
+  position: relative;
+  z-index: 2;
+}
+
+/* MAIS ESTRELAS PARA DEIXAR MAIS DENSO */
+
+.stars::after,
+.stars2::after,
+.stars3::after {
+  content: "";
+
+  position: absolute;
+
+  top: 2000px;
+  left: 0;
+
+  width: inherit;
+  height: inherit;
+
+  border-radius: 50%;
+
+  background: inherit;
+
+  box-shadow: inherit;
+}
+
+/* EFEITO DE BRILHO */
+
+.stars {
+  filter: drop-shadow(0 0 4px rgba(255,255,255,0.7));
+}
+
+.stars2 {
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.5));
+}
+
+.stars3 {
+  filter: drop-shadow(0 0 3px rgba(255,255,255,0.9));
+}
+
+/* SUAVIZA PERFORMANCE */
+
+.stars,
+.stars2,
+.stars3 {
+  will-change: transform;
+}
+
