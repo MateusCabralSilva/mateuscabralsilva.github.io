@@ -733,7 +733,7 @@ footer p {
 
   .projetos::before,
   .timeline-fill {
-    left: 10px;
+    left: 0px;
   }
 
   .redes-sociais {
