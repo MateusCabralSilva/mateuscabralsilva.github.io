@@ -34,12 +34,12 @@ a:hover {
 
 h1,
 h2 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: 50px;
   line-height: 1;
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.7;
 }
@@ -55,7 +55,7 @@ header {
 
   width: min(90%, 900px);
 
-  padding: 0 24px;
+  padding: 0 20px;
 
   display: flex;
   align-items: center;
@@ -63,8 +63,8 @@ header {
 
   background: rgba(15, 15, 15, 0.6);
 
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 100px;
@@ -198,24 +198,14 @@ section {
 #projetos::before {
   top: 0;
 
-  background: linear-gradient(
-    to top,
-    transparent,
-    rgba(0, 0, 0, 0.8),
-    #000
-  );
+  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.8), #000);
 }
 
 #repositorios::after,
 #home::after {
   bottom: 0;
 
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(0, 0, 0, 0.8),
-    #000
-  );
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8), #000);
 }
 
 /* HOME */
@@ -279,7 +269,7 @@ section {
 
   margin: auto;
 
-  padding: 20px;
+  padding: 10px;
 
   line-height: 1.8;
   text-align: justify;
@@ -306,6 +296,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -100px;
 }
 
 /* TIMELINE */
@@ -548,7 +539,6 @@ footer p {
 /* RESPONSIVO */
 
 @media (max-width: 1250px) {
-
   #projetos {
     overflow: visible;
   }
@@ -581,7 +571,6 @@ footer p {
 }
 
 @media (max-width: 700px) {
-
   .pc {
     display: none;
   }
@@ -617,8 +606,8 @@ footer p {
     background: rgba(10, 10, 10, 0.95);
 
     backdrop-filter: blur(18px);
-
-    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 50px;
 
     opacity: 0;
     pointer-events: none;
@@ -639,7 +628,7 @@ footer p {
   .card {
     width: calc(100vw - 80px);
 
-    margin-left: 30px;
+    margin-left: 25px;
 
     border-radius: 18px;
   }
@@ -668,7 +657,7 @@ footer p {
 
   .projetos::before,
   .timeline-fill {
-    left: 14px;
+    left: 4px;
   }
 
   #foto {
@@ -684,7 +673,6 @@ footer p {
 }
 
 @media (max-width: 470px) {
-
   .home-btn-pc {
     display: none;
   }
@@ -694,7 +682,7 @@ footer p {
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 8px;
+    gap: 3px;
   }
 
   .card {
@@ -702,15 +690,10 @@ footer p {
   }
 }
 @media (max-width: 400px) {
-
   h1,
   h2 {
     font-size: 2.2rem;
     line-height: 1;
-  }
-
-  p {
-    font-size: 1rem;
   }
 
   header {
@@ -974,15 +957,15 @@ button,
 /* EFEITO DE BRILHO */
 
 .stars {
-  filter: drop-shadow(0 0 4px rgba(255,255,255,0.7));
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.7));
 }
 
 .stars2 {
-  filter: drop-shadow(0 0 6px rgba(255,255,255,0.5));
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
 }
 
 .stars3 {
-  filter: drop-shadow(0 0 3px rgba(255,255,255,0.9));
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.9));
 }
 
 /* SUAVIZA PERFORMANCE */
@@ -992,4 +975,3 @@ button,
 .stars3 {
   will-change: transform;
 }
-
