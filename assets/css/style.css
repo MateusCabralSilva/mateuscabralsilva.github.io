@@ -739,6 +739,14 @@ footer p {
   .redes-sociais {
     gap: 25px;
   }
+  
+   .pc {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
 }
 
 /* SCROLLBAR */
