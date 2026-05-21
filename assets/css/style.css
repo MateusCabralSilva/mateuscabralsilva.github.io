@@ -605,7 +605,7 @@ footer p {
 
     background: rgba(10, 10, 10, 0.95);
 
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 50px;
 
