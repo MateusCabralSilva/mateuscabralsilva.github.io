@@ -54,18 +54,8 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
-  // Se chegou aqui, está válido — mostrar sucesso e limpar
-  success.setAttribute("aria-hidden", "false");
-  success.style.opacity = "1";
-  form.reset();
-
-  // limpar estados inválidos após envio bem-sucedido
-  wrappers.forEach(clearInvalid);
-
-  setTimeout(() => {
-    success.style.opacity = "0";
-    success.setAttribute("aria-hidden", "true");
-  }, 4000);
+  // Se chegar aqui, o formulário está válido — enviar para o serviço de email
+  form.submit();
 });
 
 // remove estado inválido quando usuário corrige o campo
