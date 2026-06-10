@@ -536,6 +536,172 @@ footer p {
   display: none;
 }
 
+/* ====== Estilos da seção de contato ====== */
+#contato {
+  padding: 60px 20px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+}
+
+#contato h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+.contato-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  background: rgba(15,15,15,0.75);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow:
+    0 10px 35px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 14px 16px;
+  color: white;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  outline: none;
+  transition: 0.2s;
+  resize: vertical;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  color: rgba(255,255,255,0.6);
+  font-weight: 300;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,255,136,0.06);
+  border-color: rgba(0,255,136,0.25);
+}
+
+#contact-form textarea {
+  min-height: 140px;
+  max-height: 300px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Reaproveita a classe .btn existente; ajustar tamanho */
+.form-actions button {
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  border: none;
+  transition: ease 0.3s;
+  color: white;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.form-actions button:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0,255,136,0.25);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.45),
+    0 0 25px rgba(0,255,136,0.15);
+}
+
+/* Mensagem de sucesso discreta */
+.form-success {
+  margin-top: 10px;
+  color: rgba(0,255,136,0.95);
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+/* ...existing code... */
+
+/* estilos para validação customizada */
+.input-wrapper {
+  position: relative;
+  display: block;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+  width: 100%;
+  padding-right: 44px; /* espaço para o ícone */
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.12s ease;
+}
+
+/* ícone escondido por padrão */
+.invalid-icon {
+  display: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ff4d4f;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(255,77,79,0.18);
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+/* estado inválido */
+.input-wrapper.invalid input,
+.input-wrapper.invalid textarea {
+  border-color: #ff4d4f !important;
+  box-shadow:
+    0 8px 22px rgba(255,77,79,0.12),
+    0 0 8px rgba(255,77,79,0.08);
+  transform: translateY(-1px);
+}
+
+/* mostra o ícone quando inválido */
+.input-wrapper.invalid .invalid-icon {
+  display: block;
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+/* melhora acessibilidade visual ao focar em campo inválido */
+.input-wrapper.invalid input:focus,
+.input-wrapper.invalid textarea:focus {
+  box-shadow:
+    0 10px 30px rgba(255,77,79,0.18),
+    0 0 12px rgba(255,77,79,0.12);
+}
+
 /* RESPONSIVO */
 
 @media (max-width: 1250px) {
@@ -669,6 +835,14 @@ footer p {
     height: 240px;
 
     margin: 0 auto 25px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    justify-content: center;
   }
 }
 
