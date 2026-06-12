@@ -71,7 +71,7 @@ form.addEventListener("submit", (e) => {
 
   emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
     to_email: "mateuscabral2024@gmail.com",
-    from_name: nome,
+    name: nome,
     from_email: email,
     subject: assunto,
     message: mensagem,
