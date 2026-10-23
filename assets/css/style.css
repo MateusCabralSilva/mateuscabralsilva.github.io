@@ -5,7 +5,7 @@
   --bg: #000;
   --fg: #fff;
   --glass-opaque: rgba(15,15,15,0.95);
-  --glass-1: rgba(15,15,15,0.6);
+  --glass-1: rgba(15,15,15,0.4);
   --glass-2: rgba(15,15,15,0.75);
   --glass-3: rgba(15,15,15,0.6);
   --white-08: rgba(255,255,255,0.08);
@@ -37,7 +37,7 @@ p{font-size:20px;font-weight:300;line-height:1.7}
 
 
 /* LAYOUT: HEADER */
-header{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:1000;width:min(90%,900px);padding-right:20px;padding-left:10px;display:flex;align-items:center;justify-content:space-between;background:var(--glass-1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--white-06);border-radius:100px;box-shadow:0 8px 30px rgba(0,0,0,0.35),var(--inset)}
+header{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:1000;width:min(90%,900px);padding-right:20px;padding-left:10px;display:flex;align-items:center;justify-content:space-between;background:var(--glass-1);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--white-06);border-radius:100px;box-shadow:0 8px 30px rgba(0,0,0,0.35),var(--inset)}
 header nav{display:flex;gap:24px}
 header nav a{font-family:"Poppins",sans-serif;font-weight:500}
 
